@@ -154,6 +154,9 @@ st.markdown("""
     }
     </style>
 """, unsafe_allow_html=True)
+git add app.py
+git commit -m "Change gender chart to pie chart"
+git push
 
 
 
