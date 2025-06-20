@@ -6,7 +6,7 @@ import numpy as np  # Required for comorbidity logic
 
 # Page configuration
 st.set_page_config(page_title="Exploring Diabetes Risk Across Demographics and Clinical Indicators", layout="wide")
-
+st.image("https://www.omegahospitals.com/blog/storage/2024/09/109c8350-786b-4a71-a406-da787e50cac0-765x765.jpg, use_container_width=True)
 # Load data
 df = pd.read_csv("diabetes_clean.csv")
 
