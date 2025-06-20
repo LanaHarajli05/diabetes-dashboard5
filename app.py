@@ -136,8 +136,10 @@ st.plotly_chart(fig10, use_container_width=True)
 st.markdown("""The heatmap shows a compounded effect of age and smoking on diabetes prevalence.Older individuals espeically those aged 65+ reveal significantly higher diabetes rates,with current and former smokers at highest risk.Even in the middle age(50-65),smoking history is clearly associated with increased diabetes prevalence.These results show us the dual importance of age and smoking history on diabetes""")
 # Footer
 st.markdown("---")
-st.markdown(" *“Never be ashamed of being diabetic. Your strength in managing it is a badge of resilience.”*")
-st.markdown(" *Developed by Lana Harajli*")
+st.markdown("💬 *“Never be ashamed of being diabetic. Your strength in managing it is a badge of resilience.”*")
+st.markdown("🔧 *Developed by Lana Harajli*")
+
+# CSS styling to reduce padding
 st.markdown("""
     <style>
     .block-container {
@@ -146,6 +148,7 @@ st.markdown("""
     }
     </style>
 """, unsafe_allow_html=True)
+
 
 
 
