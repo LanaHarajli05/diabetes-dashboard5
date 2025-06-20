@@ -134,11 +134,12 @@ heatmap_df = filtered_df.groupby(["age_group", "smoking_history"])["diabetes"].m
 fig10 = px.density_heatmap(heatmap_df, x="smoking_history", y="age_group", z="diabetes", color_continuous_scale="Reds")
 st.plotly_chart(fig10, use_container_width=True)
 st.markdown("""The heatmap shows a compounded effect of age and smoking on diabetes prevalence.Older individuals espeically those aged 65+ reveal significantly higher diabetes rates,with current and former smokers at highest risk.Even in the middle age(50-65),smoking history is clearly associated with increased diabetes prevalence.These results show us the dual importance of age and smoking history on diabetes""")
+# Footer
 st.markdown("---")
-st.markdown("*“Never be ashamed of being diabetic. It’s not a weakness; it’s a story of strength and resilience.”*")
-st.markdown("*Developed by Lana Harajli*")
+st.markdown(" *“Never be ashamed of being diabetic. Your strength in managing it is a badge of resilience.”*")
+st.markdown(" *Developed by Lana Harajli*")
 
-# Optional: reduce padding
+# Apply custom CSS padding
 st.markdown("""
     <style>
     .block-container {
@@ -147,6 +148,7 @@ st.markdown("""
     }
     </style>
 """, unsafe_allow_html=True)
+
 
 
 
