@@ -3,10 +3,9 @@ import pandas as pd
 import plotly.express as px
 import numpy as np  # Required for comorbidity logic
 
-
 # Page configuration
 st.set_page_config(page_title="Exploring Diabetes Risk Across Demographics and Clinical Indicators", layout="wide")
-st.image("https://www.omegahospitals.com/blog/storage/2024/09/109c8350-786b-4a71-a406-da787e50cac0-765x765.jpg, use_container_width=True)
+
 # Load data
 df = pd.read_csv("diabetes_clean.csv")
 
@@ -35,10 +34,9 @@ This dashboard is built on a synthetic healthcare dataset comprising over 100,00
 Leveraging interactive visual analytics, this dashboard explores the prevalence and distribution of diabetes across these variables. The goal is to help healthcare stakeholders identify risk factors, guide preventive strategies, and enable data-informed decisions to improve chronic disease management and population health outcomes.
 """)
 
-# NOTE: All indentation errors fixed below (inside expanders)
-
 # Row 1
 col1, col2 = st.columns(2)
+
 with col1:
     st.subheader("Diabetes Prevalence by Age Group")
     age_group_chart = filtered_df.groupby("age_group")["diabetes"].mean().reset_index()
@@ -50,15 +48,10 @@ with col1:
 with col2:
     st.subheader("Diabetes Rates by Gender")
     gender_chart = filtered_df.groupby("gender")["diabetes"].mean().reset_index()
-    fig2 = px.pie(
-        gender_chart,
-        values="diabetes",
-        names="gender",
-        title="Diabetes Rate by Gender"
-    )
+    fig2 = px.pie(gender_chart, values="diabetes", names="gender", title="Diabetes Rates by Gender")
     st.plotly_chart(fig2, use_container_width=True)
     with st.expander("Interpretation"):
-        st.markdown("""The pie chart shows the distribution of diabetes among gender. We can notice that the percentage of males with diabetes is higher than that of females.""")
+        st.markdown("""The pie chart shows us the distribution of Diabetes among gender, we can notice that the % of Male with Diabetes is higher than % of female with diabetes.""")
 
 
 
