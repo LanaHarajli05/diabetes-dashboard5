@@ -12,6 +12,7 @@ st.set_page_config(page_title="Exploring Diabetes Risk Across Demographics and C
 # Banner image at the top
 st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Diabetes-test.jpg/640px-Diabetes-test.jpg", use_container_width=True)
 
+
 # Load data
 df = pd.read_csv("diabetes_clean.csv")
 
@@ -55,10 +56,16 @@ with col1:
 with col2:
     st.subheader("Diabetes Rates by Gender")
     gender_chart = filtered_df.groupby("gender")["diabetes"].mean().reset_index()
-fig2 = px.pie(gender_chart, values="diabetes", names="gender", title="Diabetes Rate by Gender")
-st.plotly_chart(fig2, use_container_width=True)
-with st.expander("Interpretation"):
+    fig2 = px.pie(
+        gender_chart,
+        values="diabetes",
+        names="gender",
+        title="Diabetes Rate by Gender"
+    )
+    st.plotly_chart(fig2, use_container_width=True)
+    with st.expander("Interpretation"):
         st.markdown("""The pie chart shows the distribution of diabetes among gender. We can notice that the percentage of males with diabetes is higher than that of females.""")
+
 
 
 # Row 2
