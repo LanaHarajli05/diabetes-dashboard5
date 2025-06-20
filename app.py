@@ -87,8 +87,7 @@ st.markdown("---")
 st.subheader("BMI Distribution by Diabetes Status")
 fig6 = px.violin(filtered_df, x="diabetes", y="bmi", box=True, points="outliers")
 st.plotly_chart(fig6, use_container_width=True)
-st.markdown("The violin plot shows that individuals with diabetes tend to have a higher and more spread-out BMI distribution, reinforcing that excess body weight is a significant risk
-factor for developing diabetes.")
+st.markdown("The violin plot shows that individuals with diabetes tend to have a higher and more spread-out BMI distribution, reinforcing that excess body weight is a significant risk factor for developing diabetes.")
 
 # Row 5: Blood glucose
 st.markdown("---")
@@ -96,7 +95,7 @@ st.subheader("Blood Glucose Level by Diabetes Status")
 fig7 = px.box(filtered_df, x="diabetes", y="blood_glucose_level")
 st.plotly_chart(fig7, use_container_width=True)
 st.markdown("The boxplot clearly shows that individuals with diabetes tend to have higher and more variable blood glucose levels.This supports the clinical definition of diabetes as
-a condition characterized by elevated blood sugar..")
+a condition characterized by elevated blood sugar.")
 
 # Row 6: Heatmap by Gender and Age Group
 st.markdown("---")
