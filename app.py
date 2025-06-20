@@ -138,8 +138,6 @@ st.markdown("""The heatmap shows a compounded effect of age and smoking on diabe
 st.markdown("---")
 st.markdown(" *“Never be ashamed of being diabetic. Your strength in managing it is a badge of resilience.”*")
 st.markdown(" *Developed by Lana Harajli*")
-
-# Apply custom CSS padding
 st.markdown("""
     <style>
     .block-container {
