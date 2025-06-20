@@ -3,14 +3,10 @@ import pandas as pd
 import plotly.express as px
 import numpy as np  # Required for comorbidity logic
 
-# Force a Streamlit update for cache refresh
-st.markdown("<!-- force update -->")
 
 # Page configuration
 st.set_page_config(page_title="Exploring Diabetes Risk Across Demographics and Clinical Indicators", layout="wide")
 
-# Banner image at the top
-st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Diabetes-test.jpg/640px-Diabetes-test.jpg", use_container_width=True)
 
 
 # Load data
