@@ -51,7 +51,7 @@ with col2:
     fig2 = px.pie(gender_chart, values="diabetes", names="gender", title="Diabetes Rates by Gender")
     st.plotly_chart(fig2, use_container_width=True)
     with st.expander("Interpretation"):
-        st.markdown("""The pie chart shows us the distribution of Diabetes among gender, we can notice that the % of Male with Diabetes is higher than % of female with diabetes.""")
+        st.markdown("""The bar chart shows us the distribution of Diabetes among gender, we can notice that the % of Male with Diabetes is higher than % of female with diabetes.""")
 
 
 
@@ -138,6 +138,9 @@ with st.expander("Interpretation"):
 st.markdown("---")
 st.markdown("*\u201cNever be ashamed of being diabetic. It\u2019s not a weakness; it\u2019s a story of strength and resilience.\u201d*")
 st.markdown("*Developed by Lana Harajli*")
+git add app.py
+git commit -m "Removed broken image and force update tag"
+git push
 
 # Optional: reduce padding
 st.markdown("""
