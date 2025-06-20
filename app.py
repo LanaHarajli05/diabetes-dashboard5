@@ -7,8 +7,6 @@ import numpy as np  # Required for comorbidity logic
 # Page configuration
 st.set_page_config(page_title="Exploring Diabetes Risk Across Demographics and Clinical Indicators", layout="wide")
 
-
-
 # Load data
 df = pd.read_csv("diabetes_clean.csv")
 
@@ -157,9 +155,6 @@ st.markdown("""
     }
     </style>
 """, unsafe_allow_html=True)
-git add app.py
-git commit -m "Change gender chart to pie chart"
-git push
 
 
 
