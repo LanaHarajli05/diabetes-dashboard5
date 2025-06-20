@@ -10,7 +10,7 @@ st.markdown("<!-- force update -->")
 st.set_page_config(page_title="Exploring Diabetes Risk Across Demographics and Clinical Indicators", layout="wide")
 
 # Banner image at the top
-st.image("https://i.pinimg.com/originals/63/ba/84/63ba843bb6d2ac95d307ab4a5188ab88.jpg", use_column_width=True)
+st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Diabetes-test.jpg/640px-Diabetes-test.jpg", use_container_width=True)
 
 # Load data
 df = pd.read_csv("diabetes_clean.csv")
