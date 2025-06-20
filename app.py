@@ -138,9 +138,6 @@ with st.expander("Interpretation"):
 st.markdown("---")
 st.markdown("*\u201cNever be ashamed of being diabetic. It\u2019s not a weakness; it\u2019s a story of strength and resilience.\u201d*")
 st.markdown("*Developed by Lana Harajli*")
-git add app.py
-git commit -m "Removed broken image and force update tag"
-git push
 
 # Optional: reduce padding
 st.markdown("""
