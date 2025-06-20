@@ -55,10 +55,11 @@ with col1:
 with col2:
     st.subheader("Diabetes Rates by Gender")
     gender_chart = filtered_df.groupby("gender")["diabetes"].mean().reset_index()
-    fig2 = px.bar(gender_chart, x="gender", y="diabetes")
-    st.plotly_chart(fig2, use_container_width=True)
-    with st.expander("Interpretation"):
-        st.markdown("""The bar chart shows the distribution of diabetes among gender. We can notice that the percentage of males with diabetes is higher than that of females.""")
+fig2 = px.pie(gender_chart, values="diabetes", names="gender", title="Diabetes Rate by Gender")
+st.plotly_chart(fig2, use_container_width=True)
+with st.expander("Interpretation"):
+        st.markdown("""The pie chart shows the distribution of diabetes among gender. We can notice that the percentage of males with diabetes is higher than that of females.""")
+
 
 # Row 2
 col3, col4 = st.columns(2)
